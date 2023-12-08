@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Hakan Okay",
   desc: "Code snippets, articles about software development, data science/engineering.",
   title: "okay.blog()",
-  //ogImage: "astropaper-og.jpg", TODO: add an og image
+  ogImage: "og-image.jpg",
   lightAndDarkMode: true,
   postPerPage: 6,
 };
