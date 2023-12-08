@@ -29,13 +29,13 @@ export const SOCIALS: SocialObjects = [
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/hakan-okay",
-    linkTitle: `${SITE.title} on LinkedIn`,
+    linkTitle: `${SITE.author} on LinkedIn`,
     active: true,
   },
   {
     name: "Mail",
     href: "mailto:hokay.ca@gmail.com",
-    linkTitle: `Send an email to ${SITE.title}`,
+    linkTitle: `Send an email to ${SITE.author}`,
     active: false,
   },
 ];
