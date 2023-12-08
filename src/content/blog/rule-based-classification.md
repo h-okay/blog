@@ -11,13 +11,13 @@ tags:
 description: Discover how a mobile app business optimizes user data through rule-based classification, creating personas for effective customer segmentation and enabling quick estimations and targeted marketing to boost profits.
 ---
 
-<img src="/images/rule-based/rule-based1.gif" class="rounded-lg mx-auto">
+<img src="/images/rule-based/rule-based1.gif" class="rounded-lg mx-auto" alt="intro">
 
 Customer segmentation is the process by which you divide your customers up based on common characteristics. This allows marketers to engage with each customer in the most effective way or make an estimation for their new customers based on previous data.
 
 There’s one more term we’re going to use a lot today and that’s persona. A persona is a fictional character created to represent a user type that might use a site, brand, or product similarly.
 
-<div class="flex items-center justify-center gap-5 py-6 text-[#f3dbc5]">
+<div class="flex items-center justify-center gap-5 py-6 text-[#f3dbc5]" >
   <span>&#x2022;</span>
   <span>&#x2022;</span>
   <span>&#x2022;</span>
@@ -27,7 +27,7 @@ There’s one more term we’re going to use a lot today and that’s persona. A
 
 Let’s say you run a mobile app business. You can collect user data such as which country users are from, what device they are using, their gender, age, and how much money they spend using your app. After you’ve had a good amount of data, you can process this data and create segmentations and personas based on your previous or current users. After this point, you can use this knowledge to get a fast estimation about your new users, how they are likely to behave and use your application. You can use different marketing for your product based on your user’s segmentation to increase your profits.
 
-<img src="/images/rule-based/rule-based2.gif" class="rounded-lg mx-auto">
+<img src="/images/rule-based/rule-based2.gif" class="rounded-lg mx-auto" alt="flow">
 
 <div class="flex items-center justify-center gap-5 py-6 text-[#f3dbc5]">
   <span>&#x2022;</span>
@@ -39,7 +39,7 @@ Let’s say you run a mobile app business. You can collect user data such as whi
 
 To be able to create accurate personas collecting the data is not enough. First, we have to process the data to a form that holds information in categories. And since we are collecting user data based on their purchases, there may be duplicates in our data. The same customer can make 2 purchases and appear as 2 different customers.
 
-<img src="/images/rule-based/rule-based3.gif" class="rounded-lg mx-auto">
+<img src="/images/rule-based/rule-based3.gif" class="rounded-lg mx-auto" alt="concatenation">
 
 <div class="flex items-center justify-center gap-5 py-6 text-[#f3dbc5]">
   <span>&#x2022;</span>
@@ -83,7 +83,7 @@ There are 2 unique sources, 6 unique prices, and 6 unique countries available in
 The minimum age is 15 while the maximum is 66.
 Brazil is the country with the most money spent while Turkey has the highest money spent per person.
 
-<img src="/images/rule-based/rule-based4.gif" class="rounded-lg mx-auto">
+<img src="/images/rule-based/rule-based4.gif" class="rounded-lg mx-auto" alt="eda">
 
 <div class="flex items-center justify-center gap-5 py-6 text-[#f3dbc5]">
   <span>&#x2022;</span>
@@ -104,7 +104,7 @@ agg_df = df.groupby(['COUNTRY',
 agg_df = agg_df.reset_index()
 ```
 
-<img src="/images/rule-based/rule-based5.gif" class="rounded-lg mx-auto">
+<img src="/images/rule-based/rule-based5.gif" class="rounded-lg mx-auto" alt="aggregated">
 
 <div class="flex items-center justify-center gap-5 py-6 text-[#f3dbc5]">
   <span>&#x2022;</span>
@@ -121,7 +121,7 @@ agg_df['AGE_CAT'] = pd.cut(x=agg_df['AGE'], bins=[0, 18, 23, 30, 40, 66, 100],
                                    "67_100"])
 ```
 
-<img src="/images/rule-based/rule-based6.gif" class="rounded-lg mx-auto">
+<img src="/images/rule-based/rule-based6.gif" class="rounded-lg mx-auto" alt="age-categories">
 
 <div class="flex items-center justify-center gap-5 py-6 text-[#f3dbc5]">
   <span>&#x2022;</span>
@@ -139,7 +139,7 @@ agg_df['customers_level_based'] = agg_df[
     "_".join, axis=1)
 ```
 
-<img src="/images/rule-based/rule-based7.gif" class="rounded-lg mx-auto">
+<img src="/images/rule-based/rule-based7.gif" class="rounded-lg mx-auto" alt="rule-based">
 
 <div class="flex items-center justify-center gap-5 py-6 text-[#f3dbc5]">
   <span>&#x2022;</span>
@@ -163,7 +163,7 @@ agg_df.sort_values('PRICE', ascending=False, inplace=True)
 agg_df.reset_index(inplace=True, drop=True)
 ```
 
-<div class="flex items-center justify-center gap-5 py-6 text-[#f3dbc5]">
+<div class="flex items-center justify-center gap-5 py-6 text-[#f3dbc5]" >
   <span>&#x2022;</span>
   <span>&#x2022;</span>
   <span>&#x2022;</span>
@@ -176,6 +176,6 @@ Since we created our personas and removed duplicates, now we can create our segm
 agg_df['SEGMENT'] = pd.qcut(agg_df.PRICE, 4, labels=['D', 'C', 'B', 'A'])
 ```
 
-<img src="/images/rule-based/rule-based8.gif" class="rounded-lg mx-auto">
+<img src="/images/rule-based/rule-based8.gif" class="rounded-lg mx-auto" alt="segments">
 
 Now we have ourselves rule-based classified data that we can use to get quick about our new user’s estimated spending and segment information.

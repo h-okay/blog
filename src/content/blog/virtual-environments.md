@@ -18,7 +18,7 @@ You want these spaces because someone trying to run your code might face an erro
 
 Although there are more options to use, 4 virtual environment tools are the most popular and widely used. These tools are called venv, virtualenv, pipenv, and conda. Today we will focus on Conda.
 
-<img src="/images/venv/venv1.gif" class="rounded-lg mx-auto">
+<img src="/images/venv/venv1.gif" class="rounded-lg mx-auto" alt="options">
 
 While venv and virtualenv use pip as their package manager, pipenv and conda can be used for both managing packages and virtual environments.
 
@@ -32,7 +32,7 @@ Working with Anaconda is pretty straightforward. Get the installer for your oper
 
 Let’s imagine creating a virtual environment is like creating an empty sealed box. You will put the books you read inside and the box’s contents will be isolated from other books in your room and keep the place clean and tidy.
 
-<img src="/images/venv/venv2.gif" class="rounded-lg mx-auto">
+<img src="/images/venv/venv2.gif" class="rounded-lg mx-auto" alt="create">
 
 To create this box using Anaconda Prompt we write down:
 
@@ -48,7 +48,7 @@ conda create -n my_env
 
 We created the box but it is still sealed. If we wanna put the books inside, first we have to open the box.
 
-<img src="/images/venv/venv3.gif" class="rounded-lg mx-auto">
+<img src="/images/venv/venv3.gif" class="rounded-lg mx-auto" alt="activate">
 
 To open the box using Anaconda Prompt we write down:
 
@@ -64,7 +64,7 @@ conda activate my_env
 
 Now that the box is open we can put our books inside freely.
 
-<img src="/images/venv/venv4.gif" class="rounded-lg mx-auto">
+<img src="/images/venv/venv4.gif" class="rounded-lg mx-auto" alt="install">
 
 To put our books inside using Anaconda Prompt we write down:
 
@@ -94,7 +94,7 @@ conda install pandas=1.2.1
 
 From time to time you may want to know which books you have inside the box.
 
-<img src="/images/venv/venv5.gif" class="rounded-lg mx-auto">
+<img src="/images/venv/venv5.gif" class="rounded-lg mx-auto" alt="list">
 
 To see every book you have you use:
 
@@ -110,7 +110,7 @@ conda list
 
 And what happens when you want to replace your old book with a new print?
 
-<img src="/images/venv/venv6.gif" class="rounded-lg mx-auto">
+<img src="/images/venv/venv6.gif" class="rounded-lg mx-auto" alt="update">
 
 To replace your book with the new print you use:
 
@@ -132,7 +132,7 @@ conda upgrade package_name
 
 Let’s say you no longer want to keep a book inside your box.
 
-<img src="/images/venv/venv7.gif" class="rounded-lg mx-auto">
+<img src="/images/venv/venv7.gif" class="rounded-lg mx-auto" alt="remove">
 
 To achieve this, using Anaconda Prompt you can write:
 
@@ -148,7 +148,7 @@ conda remove package_name
 
 You studied all the books inside and have all the knowledge you need for a certain subject. Now a friend of yours wants to study the same subject as exactly as you did and keeps confusing himself. He’s probably trying to learn from different prints. You want to help your friend out so you want to send the contents of your box to him.
 
-<img src="/images/venv/venv8.gif" class="rounded-lg mx-auto">
+<img src="/images/venv/venv8.gif" class="rounded-lg mx-auto" alt="export">
 
 You can write down the contents to send to your friend using:
 
@@ -158,7 +158,7 @@ conda env export > environment.yaml
 
 And after your friend gets the contents he can use it as a shopping list to get the books:
 
-<img src="/images/venv/venv9.gif" class="rounded-lg mx-auto">
+<img src="/images/venv/venv9.gif" class="rounded-lg mx-auto" alt="create-from-file">
 
 ```bash
 conda env create -f environment.yaml
@@ -172,7 +172,7 @@ conda env create -f environment.yaml
 
 After you know you will no longer need the box and have already written down what you had inside to a notebook you may want to make the box disappear from existence.
 
-<img src="/images/venv/venv10.gif" class="rounded-lg mx-auto">
+<img src="/images/venv/venv10.gif" class="rounded-lg mx-auto" alt="destroy">
 
 To achieve this:
 
