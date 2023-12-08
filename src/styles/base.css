@@ -21,12 +21,12 @@
     --color-border: 171, 75, 8;
   }
   @font-face {
-    font-family: 'Iosevka Web';
+    font-family: "Iosevka Web";
     font-display: swap;
     font-weight: 400;
     font-stretch: normal;
     font-style: normal;
-    src: url('/fonts/Iosevka-Regular.ttf') format('truetype')
+    src: url("/fonts/Iosevka-Regular.ttf") format("truetype");
   }
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
