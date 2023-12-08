@@ -1,4 +1,3 @@
 # Blog
 
-Blog build with Astro and Tailwind.
-# blog
+Personal blog live at https://blog.hakanokay.dev
