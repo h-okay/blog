@@ -25,17 +25,11 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "post",
-        label: "Posts",
-        path: "src/content/posts",
+        name: "blog",
+        label: "Blog",
+        path: "src/content/blog",
         fields: [
-          { type: "string", name: "author", label: "Author", required: true },
-          {
-            type: "datetime",
-            name: "pubDatetime",
-            label: "PubDatetime",
-            required: true,
-          },
+
           {
             type: "string",
             name: "title",
@@ -45,8 +39,21 @@ export default defineConfig({
           },
           {
             type: "string",
+            name: "description",
+            label: "Description",
+            required: true,
+          },
+          { type: "string", name: "author", label: "Author", required: true },
+          {
+            type: "datetime",
+            name: "pubDatetime",
+            label: "Publish Date",
+            required: true,
+          },
+          {
+            type: "string",
             name: "postSlug",
-            label: "PostSlug",
+            label: "Slug",
             required: false,
           },
           {
@@ -66,19 +73,13 @@ export default defineConfig({
           {
             type: "string",
             name: "ogImage",
-            label: "OgImage",
+            label: "OG Image URL",
             required: false,
           },
           {
             type: "string",
-            name: "description",
-            label: "Description",
-            required: true,
-          },
-          {
-            type: "string",
             name: "canonicalURL",
-            label: "CanonicalURL",
+            label: "Canonical URL",
             required: false,
           },
           { type: "rich-text", name: "body", label: "Body", isBody: true },
