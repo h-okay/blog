@@ -2,11 +2,17 @@ import { LOCALE } from "@config";
 
 export interface Props {
   datetime: string | Date;
+  readTime?: string;
   size?: "sm" | "lg";
   className?: string;
 }
 
-export default function Datetime({ datetime, size = "sm", className }: Props) {
+export default function Datetime({
+  datetime,
+  readTime,
+  size = "sm",
+  className,
+}: Props) {
   return (
     <div className={`flex items-center space-x-2 opacity-80 ${className}`}>
       <svg
@@ -21,13 +27,19 @@ export default function Datetime({ datetime, size = "sm", className }: Props) {
       </svg>
       <span className="sr-only">Posted on:</span>
       <span className={`${size === "sm" ? "text-sm" : "text-base"}`}>
-        <FormattedDatetime datetime={datetime} />
+        <FormattedDatetime datetime={datetime} readTime={readTime} />
       </span>
     </div>
   );
 }
 
-const FormattedDatetime = ({ datetime }: { datetime: string | Date }) => {
+const FormattedDatetime = ({
+  datetime,
+  readTime,
+}: {
+  datetime: string | Date;
+  readTime?: string;
+}) => {
   const myDatetime = new Date(datetime);
 
   const date = myDatetime.toLocaleDateString(LOCALE, {
@@ -47,6 +59,9 @@ const FormattedDatetime = ({ datetime }: { datetime: string | Date }) => {
       <span aria-hidden="true"> | </span>
       <span className="sr-only">&nbsp;at&nbsp;</span>
       {time}
+      <span aria-hidden="true"> | </span>
+      <span className="sr-only">&nbsp;at&nbsp;</span>
+      {readTime}
     </>
   );
 };
