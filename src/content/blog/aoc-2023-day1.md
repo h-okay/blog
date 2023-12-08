@@ -8,6 +8,7 @@ draft: false
 tags:
   - python
   - algorithms
+  - advent-of-code
 description: Part 1 and Part 2 solutions to Advent of Code 2023, Day 1.
 ---
 
