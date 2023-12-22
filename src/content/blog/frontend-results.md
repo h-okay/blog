@@ -313,7 +313,7 @@ body {
 
 ### JavaScript
 
-```JavaScript
+```js
 function generateStat(type, category, score, icon) {
   return `<div class="stat ${type}">
     <div class="stat-info">
