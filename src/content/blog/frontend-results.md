@@ -1,6 +1,6 @@
 ---
 author: Hakan Okay
-pubDatetime: 2023-12-04T15:22:00Z
+pubDatetime: 2023-11-26T13:13:00Z
 title: Results Summary Component
 postSlug: results-summary-component
 featured: false

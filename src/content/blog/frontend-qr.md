@@ -1,6 +1,6 @@
 ---
 author: Hakan Okay
-pubDatetime: 2023-12-04T15:22:00Z
+pubDatetime: 2023-11-25T15:02:00Z
 title: QR Code Component
 postSlug: qr-code-component
 featured: false
