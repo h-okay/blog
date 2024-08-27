@@ -6,7 +6,7 @@ import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
-import Comments from "@components/Comments"
+import Comments from "@components/Comments";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -84,6 +84,6 @@ const ogUrl = new URL(
     @apply my-8;
   }
   .spinner {
-    @apply h-[50px] w-[50px] flex items-center justify-center;
+    @apply flex h-[50px] w-[50px] items-center justify-center;
   }
 </style>
