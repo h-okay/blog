@@ -1,27 +1,34 @@
 import { useEffect, useState } from "react";
 
 export default function Comments() {
-  const [loading, setLoading] = useState<boolean>(true);
+  const [scriptLoaded, setScriptLoaded] = useState(false);
 
   useEffect(() => {
-    const scriptElem = document.createElement("script");
-    scriptElem.type = "text/javascript";
-    scriptElem.setAttribute("data-isso", "https://isso.fly.dev/");
-    scriptElem.setAttribute("src", "https://isso.fly.dev/js/embed.min.js");
-    scriptElem.setAttribute("data-isso-css", "true");
-    scriptElem.async = true;
+    const loadIssoScript = () => {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "https://isso.fly.dev/js/embed.min.js";
+        script.setAttribute("data-isso", "https://isso.fly.dev/");
+        script.setAttribute("data-isso-css", "true");
+        script.async = true;
 
-    const headElem = document.querySelector("head");
-    headElem?.appendChild(scriptElem);
+        script.onload = () => resolve(true);
+        script.onerror = () => reject(false);
 
-    setLoading(false);
+        document.head.appendChild(script);
+      });
+    };
+
+    loadIssoScript()
+      .then(() => setScriptLoaded(true))
+      .catch(error => console.error("Failed to load Isso script:", error));
   }, []);
 
   return (
     <section id="comments" className="w-full p-0">
-      <h2>Comments</h2>
-
-      {loading && (
+      <h2 className="pb-5 text-xl font-semibold">Comments</h2>
+      {!scriptLoaded && (
         <div id="loading-animation">
           <svg
             className="text-gray-500 h-5 w-5 animate-spin self-center"
@@ -45,7 +52,6 @@ export default function Comments() {
           </svg>
         </div>
       )}
-
       <div id="isso-thread"></div>
     </section>
   );

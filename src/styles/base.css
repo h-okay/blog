@@ -147,47 +147,7 @@
   /* Isso Comments Styles */
   #isso-thread {
     font-family: "Geist Sans", sans-serif;
-    font-size: 16px;
-    color: var(--color-text-base);
-  }
-
-  #isso-thread .isso-comment {
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 1rem;
-  }
-
-  #isso-thread .isso-comment-header {
-    margin-bottom: 0.5rem;
-  }
-
-  #isso-thread .isso-comment-author {
-    font-weight: bold;
-  }
-
-  #isso-thread .isso-comment-body {
-    line-height: 1.6;
-  }
-
-  #isso-thread .isso-postbox {
-    margin-top: 1rem;
-  }
-
-  #isso-thread .isso-input-wrapper {
-    margin-bottom: 1rem;
-  }
-
-  #isso-thread .isso-submit {
-    background-color: var(--color-accent);
-    color: var(--color-fill);
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  #isso-thread .isso-submit:hover {
-    background-color: var(--color-card-muted);
+    font-size: 14px;
   }
 }
 
