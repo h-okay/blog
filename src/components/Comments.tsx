@@ -1,60 +1,8 @@
 import { useEffect, useState } from "react";
-import { theme } from "../../tailwind.config.cjs";
-
-declare global {
-  interface Window {
-    REMARK42: any;
-    remark_config: any;
-  }
-}
-
-const insertScript = (id: string, parentElement: HTMLElement) => {
-  const script = window.document.createElement("script");
-  script.type = "text/javascript";
-  script.async = true;
-  script.id = id;
-
-  let url = window.location.origin + window.location.pathname;
-  if (url.endsWith("/")) {
-    url = url.slice(0, -1);
-  }
-
-  const host = import.meta.env.PUBLIC_REMARK_URL;
-
-  script.innerHTML = `
-    var remark_config = {
-      host: "${host}",
-      site_id: "remark",
-      url: "${url}",
-      theme: "dark",
-      components: ["counter", "embed"],
-    };
-    !function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);`;
-
-  parentElement.appendChild(script);
-};
-
-const removeScript = (id: string, parentElement: HTMLElement) => {
-  const script = window.document.getElementById(id);
-  if (script) {
-    parentElement.removeChild(script);
-  }
-};
-
-const manageScript = () => {
-  if (!window) {
-    return () => {};
-  }
-  const { document } = window;
-  if (document.getElementById("remark42")) {
-    insertScript("comments-script", document.body);
-  }
-
-  return () => removeScript("comments-script", document.body);
-};
 
 export default function Comments() {
-  useEffect(manageScript, []);
+  const [scriptLoaded, setScriptLoaded] = useState(false);
+
   useEffect(() => {
     const loadIssoScript = () => {
       return new Promise((resolve, reject) => {
@@ -78,12 +26,33 @@ export default function Comments() {
   }, []);
 
   return (
-    <>
-      <h2>Comments</h2>
-      <p>
-        There are <span className="remark42__counter"></span> comments.
-      </p>
-      <div id="remark42"></div>
-    </>
+    <section id="comments" className="w-full p-0">
+      <h2 className="pb-5 text-xl font-semibold">Comments</h2>
+      {!scriptLoaded && (
+        <div id="loading-animation">
+          <svg
+            className="text-gray-500 h-5 w-5 animate-spin self-center"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              className="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              strokeWidth="4"
+            />
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            />
+          </svg>
+        </div>
+      )}
+      <div id="isso-thread"></div>
+    </section>
   );
 }
