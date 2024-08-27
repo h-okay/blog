@@ -56,10 +56,26 @@ const manageScript = () => {
 export default function Comments() {
   useEffect(manageScript, []);
   useEffect(() => {
-    if (window.REMARK42) {
-      window.REMARK42.changeTheme(localStorage.getItem("theme") || "light");
-    }
-  }, [theme]);
+    const loadIssoScript = () => {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "https://isso.fly.dev/js/embed.min.js";
+        script.setAttribute("data-isso", "https://isso.fly.dev/");
+        script.setAttribute("data-isso-css", "true");
+        script.async = true;
+
+        script.onload = () => resolve(true);
+        script.onerror = () => reject(false);
+
+        document.head.appendChild(script);
+      });
+    };
+
+    loadIssoScript()
+      .then(() => setScriptLoaded(true))
+      .catch(error => console.error("Failed to load Isso script:", error));
+  }, []);
 
   return (
     <>
