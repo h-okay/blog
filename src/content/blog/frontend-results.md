@@ -17,7 +17,7 @@ description: This is a solution to the Results summary component challenge on Fr
 ### Markup
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     ...
@@ -54,260 +54,268 @@ description: This is a solution to the Results summary component challenge on Fr
 
 ```css
 @font-face {
-    font-family: 'HankenGrotesk';
-    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-family: "HankenGrotesk";
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("truetype");
 }
 
-
 body {
-    padding: 0;
-    margin: 0;
-    font-family: 'HankenGrotesk', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+  font-family: "HankenGrotesk", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffffff;
 }
 
 .container {
-    display: flex;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    justify-content: center;
-    align-items: center;
-    width: 600px;
+  display: flex;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
 }
 
 .result {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    background: linear-gradient(to top, hsla(241, 81%, 54%, 0.95), hsla(252, 100%, 67%, 1));
-    border-radius: 25px;
-    width: 300px;
-    height: 400px;
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(
+    to top,
+    hsla(241, 81%, 54%, 0.95),
+    hsla(252, 100%, 67%, 1)
+  );
+  border-radius: 25px;
+  width: 300px;
+  height: 400px;
+  padding: 10px;
 }
 
 .result-title {
-    color: #cdc2ff;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  color: #cdc2ff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .result-score {
-    border-radius: 50%;
-    background: linear-gradient(to top, hsla(252, 100%, 67%, 0.1), hsla(241, 81%, 54%, 0.8));
-    padding: 30px 45px 30px 45px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  border-radius: 50%;
+  background: linear-gradient(
+    to top,
+    hsla(252, 100%, 67%, 0.1),
+    hsla(241, 81%, 54%, 0.8)
+  );
+  padding: 30px 45px 30px 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .result-score-number {
-    color: #fdfdff;
-    font-size: 60px;
-    font-weight: 700;
-    width: 70px;
+  color: #fdfdff;
+  font-size: 60px;
+  font-weight: 700;
+  width: 70px;
 }
 
 .result-score-total {
-    color: #8276ff;
-    font-weight: 700;
+  color: #8276ff;
+  font-weight: 700;
 }
 
 .result-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    text-align: center;
-    padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .result-content-title {
-    color: #fff9ff;
-    font-size: 1.5rem;
-    margin: 0;
-    padding-bottom: 10px;
+  color: #fff9ff;
+  font-size: 1.5rem;
+  margin: 0;
+  padding-bottom: 10px;
 }
 
 .result-content-text {
-    color: #b9b4ff;
-    margin: 0;
-    width: 93%;
-    padding: 10px;
+  color: #b9b4ff;
+  margin: 0;
+  width: 93%;
+  padding: 10px;
 }
 
-
 .summary {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 80%;
-    height: 400px;
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 400px;
+  padding: 10px;
 }
 
 .summary-wrapper {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
 }
 
 .summary-title {
-    margin: 0;
+  margin: 0;
 }
 
-
 .stats {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .stat {
-    padding: 15px;
-    border-radius: 8px;
-    display: flex;
-    gap: 1px;
-    align-items: center;
-    justify-content: space-between;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  gap: 1px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .stat:hover {
-    transform: scale(1.02);
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
+  transform: scale(1.02);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .stat-info {
-    display: flex;
-    gap: 5px;
-    align-items: center;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
 .stat-ratings {
-    display: flex;
-    gap: 5px;
-    align-items: center;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
 .stat-icon {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .stat-score {
-    font-weight: 900;
-    margin: 0;
+  font-weight: 900;
+  margin: 0;
 }
 
 .stat-max {
-    color: #a8a1a5;
-    margin: 0;
+  color: #a8a1a5;
+  margin: 0;
 }
 
 .stat-name-reaction {
-    color: #df8387;
-    font-weight: 700;
-    margin: 0;
+  color: #df8387;
+  font-weight: 700;
+  margin: 0;
 }
 
 .stat-name-memory {
-    color: #fbbe46;
-    font-weight: 700;
-    margin: 0;
+  color: #fbbe46;
+  font-weight: 700;
+  margin: 0;
 }
 
 .stat-name-verbal {
-    color: #49b39a;
-    font-weight: 700;
-    margin: 0;
+  color: #49b39a;
+  font-weight: 700;
+  margin: 0;
 }
 
 .stat-name-visual {
-    color: #6067cd;
-    font-weight: 700;
-    margin: 0;
+  color: #6067cd;
+  font-weight: 700;
+  margin: 0;
 }
 
 .reaction {
-    background-color: #fff6f6;
+  background-color: #fff6f6;
 }
 
 .memory {
-    background-color: #fffbf2;
+  background-color: #fffbf2;
 }
 
 .verbal {
-    background-color: #f3fafa;
+  background-color: #f3fafa;
 }
 
 .visual {
-    background-color: #f3f3fd;
+  background-color: #f3f3fd;
 }
 
 .summary-button {
-    background-color: #303b59;
-    border: none;
-    border-radius: 25px;
-    padding: 15px 10px 15px 10px;
-    font-weight: 600;
-    color: #ffffff;
-    cursor: pointer;
+  background-color: #303b59;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 10px 15px 10px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .summary-button:hover {
-    background: linear-gradient(to bottom, hsla(252, 100%, 67%, 0.8), hsla(241, 81%, 54%, 0.9));
-    transform: scale(1.02);
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
+  background: linear-gradient(
+    to bottom,
+    hsla(252, 100%, 67%, 0.8),
+    hsla(241, 81%, 54%, 0.9)
+  );
+  transform: scale(1.02);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 @media only screen and (max-width: 640px) {
-    body {
-        width: 100%;
-        height: 100%;
-    }
+  body {
+    width: 100%;
+    height: 100%;
+  }
 
-    .container {
-        width: 100%;
-        flex-direction: column;
-        box-shadow: none;
-    }
+  .container {
+    width: 100%;
+    flex-direction: column;
+    box-shadow: none;
+  }
 
-    .result {
-        border-radius: 0 0 60px 60px;
-        width: 100%;
-        padding: 0;
-    }
+  .result {
+    border-radius: 0 0 60px 60px;
+    width: 100%;
+    padding: 0;
+  }
 
-    .summary {
-        border-radius: 50px 50px 0 0;
-        width: 100%;
-    }
+  .summary {
+    border-radius: 50px 50px 0 0;
+    width: 100%;
+  }
 
-    .summary-wrapper {
-        width: 80%;
-
-    }
+  .summary-wrapper {
+    width: 80%;
+  }
 }
 ```
 
@@ -365,9 +373,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 fetch("./data.json")
-  .then((response) => response.json())
-  .then((data) => {
-    const stats = data.map((stat) =>
+  .then(response => response.json())
+  .then(data => {
+    const stats = data.map(stat =>
       generateStat(
         stat.category.toLowerCase(),
         stat.category,
@@ -378,7 +386,6 @@ fetch("./data.json")
     document.querySelector(".stats").innerHTML = stats.join("");
   });
 ```
-
 
 ### Result
 

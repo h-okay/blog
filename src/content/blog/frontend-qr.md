@@ -15,7 +15,7 @@ description: This is a solution to the QR code component challenge on Frontend M
 ### Markup
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     ...
@@ -46,50 +46,50 @@ description: This is a solution to the QR code component challenge on Frontend M
 
 ```css
 body {
-    background-color: #d5e1ef;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Outfit', sans-serif;
-    font-size: 15px;
-    margin: 0;
-    padding: 0;
+  background-color: #d5e1ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 13px;
-    display: inline-block;
-    width: 250px;
-    box-shadow: 0 0 10px rgba(80, 80, 80, 0.1);
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 13px;
+  display: inline-block;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(80, 80, 80, 0.1);
 }
 
 .code {
-    border-radius: 15px;
+  border-radius: 15px;
 }
 
 .text-wrapper {
-    width: 93%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+  width: 93%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .title {
-    margin: 0;
-    padding: 10px 0 10px 0;
-    font-size: 1.1rem;
+  margin: 0;
+  padding: 10px 0 10px 0;
+  font-size: 1.1rem;
 }
 
 .content {
-    color: #9da3af;
-    margin: 0;
-    padding: 10px 0 10px 0;
+  color: #9da3af;
+  margin: 0;
+  padding: 10px 0 10px 0;
 }
 ```
 
