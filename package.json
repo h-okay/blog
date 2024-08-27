@@ -21,6 +21,7 @@
     "@fontsource/geist-sans": "^5.0.3",
     "@resvg/resvg-js": "^2.6.0",
     "astro": "^4.0.3",
+    "disqus-react": "^1.1.5",
     "fuse.js": "^7.0.0",
     "github-slugger": "^2.0.0",
     "mdast-util-to-string": "^4.0.0",
