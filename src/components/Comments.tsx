@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { theme } from "../../tailwind.config.cjs";
 
 declare global {
@@ -24,7 +24,7 @@ const insertScript = (id: string, parentElement: HTMLElement) => {
   script.innerHTML = `
     var remark_config = {
       host: "${host}",
-      site_id: "blog.hakanokay.dev",
+      site_id: "remark",
       url: "${url}",
       theme: "dark",
       components: ["counter", "embed"],
