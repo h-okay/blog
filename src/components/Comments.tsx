@@ -11,6 +11,7 @@ export default function Comments() {
         script.src = "https://isso.fly.dev/js/embed.min.js";
         script.setAttribute("data-isso", "https://isso.fly.dev/");
         script.setAttribute("data-isso-css", "true");
+        script.setAttribute("data-isso-sorting", "upvotes");
         script.async = true;
 
         script.onload = () => resolve(true);
