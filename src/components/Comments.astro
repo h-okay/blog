@@ -2,12 +2,26 @@
 
 ---
 
-<section id="comments">
+<section id="comments" style="display: none;">
   <noscript>Javascript needs to be activated to view comments.</noscript>
   <h2>Comments</h2>
   <div id="isso-thread"></div>
 </section>
 
-<script
-  data-isso="https://isso.fly.dev/"
-  src="https://isso.fly.dev/js/embed.min.js"></script>
+<script>
+  function loadComments() {
+    const commentsSection = document.getElementById('comments');
+    const script = document.createElement('script');
+    script.src = 'https://isso.fly.dev/js/embed.min.js';
+    script.setAttribute('data-isso', 'https://isso.fly.dev/');
+    script.onload = () => {
+      if (commentsSection) commentsSection.style.display = 'block';
+      const spinner = document.getElementById('loading-animation');
+      if (spinner) spinner.style.display = 'none';
+    };
+    document.body.appendChild(script);
+  }
+
+  // Load comments after a short delay to ensure the DOM is ready
+  setTimeout(loadComments, 100);
+</script>
