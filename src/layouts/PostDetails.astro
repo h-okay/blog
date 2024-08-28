@@ -68,7 +68,7 @@ const ogUrl = new URL(
     <ul class="tags-container">
       {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
     </ul>
-    <Comments url={Astro.url.href} />
+    <Comments client:load />
   </main>
   <Footer />
 </Layout>
@@ -84,6 +84,6 @@ const ogUrl = new URL(
     @apply my-8;
   }
   .spinner {
-    @apply flex h-[50px] w-[50px] items-center justify-center;
+    @apply h-[50px] w-[50px] flex items-center justify-center;
   }
 </style>
