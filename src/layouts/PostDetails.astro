@@ -68,7 +68,7 @@ const ogUrl = new URL(
     <ul class="tags-container">
       {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
     </ul>
-    <Comments client:load url={Astro.url.href} />
+    <Comments url={Astro.url.href} />
   </main>
   <Footer />
 </Layout>
