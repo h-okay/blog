@@ -146,7 +146,7 @@
 
   #isso-thread .isso-comment {
     background-color: var(--color-card);
-    border: 1px solid var(--color-border);
+    border: 1px solid;
     border-radius: 8px;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -160,14 +160,6 @@
     color: var(--color-text-base);
   }
 
-  #isso-thread .isso-postbox {
-    margin-top: 1rem;
-  }
-
-  #isso-thread .isso-input-wrapper {
-    margin-bottom: 1rem;
-  }
-
   #isso-thread input,
   #isso-thread textarea {
     background-color: var(--color-fill);
@@ -177,26 +169,6 @@
     padding: 0.5rem;
     width: 100%;
     transition: border-color 0.2s ease;
-  }
-
-  #isso-thread input:focus,
-  #isso-thread textarea:focus {
-    border-color: var(--color-accent);
-    outline: none;
-  }
-
-  #isso-thread .isso-submit {
-    background-color: var(--color-accent);
-    color: var(--color-fill);
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: opacity 0.2s ease;
-  }
-
-  #isso-thread .isso-submit:hover {
-    opacity: 0.8;
   }
 }
 
